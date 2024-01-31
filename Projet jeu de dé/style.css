@@ -1,0 +1,214 @@
+
+/*GENERAL*/
+*{
+    margin: 0;
+    padding: 100 auto;
+}
+*,::after,::before{
+    box-sizing: border-box;   
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+body{
+    background-image: linear-gradient(rgba(62,20,20,0.4)
+    rgba(62,20,20,0.4)),url(back.png);
+    font-family:'Lato', sans-serif;
+    color:#555;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    font-weight: 300;
+    height: 100vh;
+}
+/*Mise en page du cadre du jeu*/
+.wrapper{
+    width: 1000px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:#fff;
+    box-shadow: 0px 10px 58px rgba(0,0,0,0.75);
+    overflow: hidden;
+    border-radius: 10px;
+}
+.player_0,
+.player_1{
+    width: 50%;
+    float: left;
+    height: 630px;
+    padding: 100px;
+}
+/*JOUEURS*/
+h2.name{
+    font-size: 25px;
+    text-align: center;
+    text-transform:"lato";
+    letter-spacing: 1px;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    color: black;
+}
+p{
+    margin: 0;
+}
+#score_0,
+#score_1{
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color:#EB4D4D;
+    margin-bottom:  180px;
+}
+.active{background-color: #f7f7f7;}
+.active-h2.name{font-weight: 300;}
+.active-h2.name::after{
+    content: "";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+}
+.round{
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 100px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.current{
+    text-align: center;
+    text-transform: "lato";
+    margin-bottom: 30px;
+    height: 2px;
+    color: black;
+    background-color: #EB4D4D;
+}
+#current_0,
+#current_1{
+    width: 10px;
+    height: 35px;
+    display:inline;
+    color:#fff;
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 170px;
+}
+.text-dice-disable{
+    visibility: hidden;
+}
+.shake{
+    animation: shake 0.5s infinite;
+}
+/*animation*/
+@keyframes shake{
+    from{
+        transform: rotate(0 deg);
+    }
+    to{
+        transform: rotate(360 deg);
+    }
+}
+button{
+    position: absolute;
+    width: 50%;
+     left: 50%;
+    transform: translate(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family:"lato", sans-serif;
+    font-size: 20px;
+    text-transform:l;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s,color 0.3s;
+    
+}
+button:hover{
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+
+.btn:focus{
+    outline:none;
+}
+.dice-5{
+    position: absolute;
+    left: 50%;
+    top: 15.5rem;
+    transform: translateX(-50%),translateY(-50%);
+    height: 45rem;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin:0 auto;
+    font-size: 90px;
+    display:flex;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+.player_winner{
+    background: #2f2f2f;
+}
+.player_winner.name{
+    font-weight: 700;
+    color: #c7365f;
+}
+.hidden{
+    display: none;
+}
+.btn:active{
+    transform: translate(-50%,3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+}
+button.btn_new{
+    top: 20px;
+    margin-block: 50px;
+}
+img{
+    height: 20px;
+}
+button.btn_roll{
+    top: 465px;
+    height: 20px;
+}
+button.btn_hold{
+    top: 525px;
+    height: 20px;
+}
+/*Responsive*/
+@media(min-width:320px){
+    .wrapper{
+        min-width: 320px;
+    }
+    h2{
+        font-size: 1.2px;
+    }
+    .btn-btn_new{
+        margin-top: 100px;
+    }
+}
+
+
+
+
+
+    
+
+
+    
+
+
+
